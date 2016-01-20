@@ -8,7 +8,7 @@ namespace TopSecretPlans
 {
     public class Destination 
     {
-        public Destination()
+         Destination()
         {
            
         }

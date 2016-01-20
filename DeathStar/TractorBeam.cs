@@ -8,9 +8,9 @@ namespace TopSecretPlans
 {
     public class TractorBeam : Reactor
     {
-        public int TractorBeamLevel
+         int TractorBeamLevel
         {
-            private set
+            set
             {
                 TractorBeamLevel = value;
             }
@@ -24,19 +24,19 @@ namespace TopSecretPlans
         {
             this.TractorBeamLevel = TractorBeamLevel;
         }
-        public void Tractorbeamgeneratortower(int powerrate)
+         void Tractorbeamgeneratortower(int powerrate)
             
         {
             TractorBeamLevel = powerrate;
                        
         }
 
-        public void GenerateTractorBeam()
+         void GenerateTractorBeam()
         {
             TractorBeamLevel++;
         }
 
-        public void CreateForce(int power, int direction)
+         void CreateForce(int power, int direction)
         {
             Tractorbeamgeneratortower(power);
             //Console.WriteLine($"Your tractor bean starts pulling with {power} at {direction} degrees");

@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 namespace TopSecretPlans
 {
 
-    class PowerCell
+    public class PowerCell
     {
         int cell = 0;
         int powerLevel;
-        public void powerCell()
+         void powerCell()
         {
             this.powerLevel = 100;
         }
-        public void LosePower()
+         void LosePower()
         {
             powerLevel--;
         }
-        public void checkPowerLevel()
+         void checkPowerLevel()
         {
             Console.WriteLine("The power level is ", powerLevel);
         }
-        public void replaceDefCell()
+         void replaceDefCell()
         {
             this.powerLevel = 100;
         }

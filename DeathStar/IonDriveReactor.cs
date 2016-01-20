@@ -8,8 +8,8 @@ namespace TopSecretPlans
 {
     public class IonDriveReactor : Reactor
     {
-        private int CriticalDriveRate = 1;
-        private int HalfDriveRate = 2;
+        public int CriticalDriveRate = 1;
+        public int HalfDriveRate = 2;
         public int IonDriveRate = 4;
         public int IonDriveHealthStatus
         {
@@ -17,12 +17,12 @@ namespace TopSecretPlans
             {
                 return IonDriveHealthStatus;
             }
-          private set { value = 100; }
+           set { value = 100; }
         }
-        private int CriticalHealth = 25;
-        private int HalfHealth = 50;
-        private int FullHealth = 100;
-        public IonDriveReactor(int PowerRate, int IonDriveHealth = 100) : base(PowerRate) 
+        public int CriticalHealth = 25;
+        public int HalfHealth = 50;
+        public int FullHealth = 100;
+         IonDriveReactor(int PowerRate, int IonDriveHealth = 100) : base(PowerRate) 
         {
             this.IonDriveHealthStatus = IonDriveHealth;
         }

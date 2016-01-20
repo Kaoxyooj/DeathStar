@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TopSecretPlans
 {
 
-    class OverBridge
+    public class OverBridge
     {
         int numberOfStairwells;
         int numberOfDutyPosts;
@@ -17,18 +17,18 @@ namespace TopSecretPlans
 
 
 
-        public OverBridge(int numberOfStairwells, int numberOfDutyPosts, int numberOfControlConsole, bool holoDisplayPad)
+         OverBridge(int numberOfStairwells, int numberOfDutyPosts, int numberOfControlConsole, bool holoDisplayPad)
         {
             this.numberOfDutyPosts = numberOfDutyPosts;
             this.numberOfStairwells = numberOfStairwells;
             this.numberOfControlConsole = numberOfControlConsole;
             this.holoDisplayPad = holoDisplayPad;
         }
-        public void turnOnDisplayPad()
+         void turnOnDisplayPad()
         {
             this.holoDisplayPad = true;
         }
-        public void checkSystems()
+         void checkSystems()
         {
             Console.WriteLine("All systems good");
         }

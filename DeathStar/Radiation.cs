@@ -2,7 +2,7 @@
 {
     public class Radiation
     {
-        public Radiation()
+        public void radiation()
         {
 
         }

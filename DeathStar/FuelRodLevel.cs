@@ -1,6 +1,6 @@
 ﻿namespace TopSecretPlans
 {
-    internal class FuelRodLevel
+   internal class FuelRodLevel
     {
     }
 }

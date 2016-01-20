@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace TopSecretPlans
 {
-    class HyperDrive
+    public class HyperDrive
     {
-		public string destination;
-        public int fuelCellLevel;
-        public int gravityLevel;
-        public bool hyperDriveExecution;
+		 string destination;
+         int fuelCellLevel;
+         int gravityLevel;
+         bool hyperDriveExecution;
         public HyperDrive(string destination, int fuelCellLevel, int GraveityLevel, bool hyperDriveExecution)
         {
 

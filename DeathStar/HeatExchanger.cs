@@ -8,7 +8,7 @@ namespace TopSecretPlans
 {
     public class HeatExchanger : IChangeTemperature
     {
-        public int Temperature;
+         int Temperature;
 
         public void Absorbheat(IChangeTemperature part)
         {

@@ -8,9 +8,9 @@ namespace TopSecretPlans
 {
     public class SuperLaser
     {
-        int laserPowerLevel;
-        int laserDamage;
-        int chargerPack;
+        int laserPowerLevel = 100;
+        int laserDamage = 100;
+        int chargerPack = 100;
         
         public SuperLaser(int laserPowerLevel, int laserDamage, int chargerPack)
         {
@@ -19,6 +19,8 @@ namespace TopSecretPlans
             this.chargerPack = chargerPack;
 
         }
+
+       
 
         public void FireLaser()
       
@@ -33,7 +35,7 @@ namespace TopSecretPlans
         }
         public void Recharge()
         {
-            laserPowerLevel = chargerPack;
+            laserPowerLevel += chargerPack;
             Console.WriteLine("The Super Laser is recharging");
         }
         public void TripleShot()
@@ -45,6 +47,15 @@ namespace TopSecretPlans
                 Recharge();
             }
 
+        }
+
+        public void ChargedShot()
+        {
+            Console.WriteLine("You fire a Charged Shot!  It does a tremendous amount of damage!");
+                laserDamage += 100;
+                laserPowerLevel -= 100;
+            Console.WriteLine("The laser power level is now depleted.");
+            
         }
     }
 }

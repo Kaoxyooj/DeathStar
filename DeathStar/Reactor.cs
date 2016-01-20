@@ -10,7 +10,7 @@ namespace TopSecretPlans
     {
         public int PowerRate
 		{
-			private set
+			 set
 			{
 				PowerRate = value;
 			}
@@ -19,14 +19,20 @@ namespace TopSecretPlans
 				return PowerRate;
 			}
 		}
-        private int InitialPowerPercent = 0;
-        public int MaxPowerPercent = 100;
+        public int InitialPowerPercent = 0;
+         int MaxPowerPercent = 100;
 
         public Reactor(int PowerRate)
         {
             this.PowerRate = PowerRate;
         }
-        public int GeneratePower()
+
+        public void theReactor(int powerRate)
+        {
+            PowerRate = powerRate;
+        }
+
+        int GeneratePower()
         {
             if(InitialPowerPercent <= MaxPowerPercent)
             {

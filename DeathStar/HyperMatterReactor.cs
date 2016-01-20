@@ -51,7 +51,7 @@ namespace TopSecretPlans
             this.StellarFuel = StellarFuel;
             HyperMatterAmount = HyperSpaceEnergy / HyperMatterRate * StellarFuel;
         }
-        public int GenerateHyperMatter()
+         int GenerateHyperMatter()
         {
             return HyperMatterAmount;
         }

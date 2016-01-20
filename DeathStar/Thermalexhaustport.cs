@@ -8,7 +8,7 @@ namespace TopSecretPlans
 {
     public class Thermalexhaustport : Exhaust, IChangeTemperature
     {
-        public int Temperature;
+         int Temperature;
 
         public Radiation ExpendExhaust(ReactorCore core)
         {
@@ -16,14 +16,24 @@ namespace TopSecretPlans
             this.HeatUp();
             return new Radiation();
         }
-        public void HeatUp()
+         void HeatUp()
         {
              this.Temperature++;
         }
         
-        public void CoolDown()
+         void CoolDown()
         {
              this.Temperature--;
+        }
+
+        void IChangeTemperature.CoolDown()
+        {
+            throw new NotImplementedException();
+        }
+
+        void IChangeTemperature.HeatUp()
+        {
+            throw new NotImplementedException();
         }
     }
 }

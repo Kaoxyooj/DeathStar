@@ -8,16 +8,16 @@ namespace TopSecretPlans
 {
     public class ReactorCore : IChangeTemperature
     {
-        public int Temperature;
-        public int fuelRods;
-        public int fuelRodLevel;
-        public int controlRods;
-        public int controlRodLevel;
-        public int waterReactorLevel;
-        public int uraniumAmount;
-        public int boronAmount;
+         int Temperature;
+         int fuelRods;
+         int fuelRodLevel;
+         int controlRods;
+         int controlRodLevel;
+         int waterReactorLevel;
+         int uraniumAmount;
+         int boronAmount;
 
-        public ReactorCore(int FuelRods, int FuelRodLevel, int ControlRods, int ControlRodLevel, int WaterReactorLevel, int UraniumAmount, int BoronAmount)
+         ReactorCore(int FuelRods, int FuelRodLevel, int ControlRods, int ControlRodLevel, int WaterReactorLevel, int UraniumAmount, int BoronAmount)
         {
             this.fuelRods = FuelRods;
             this.fuelRodLevel = FuelRodLevel;
@@ -30,7 +30,7 @@ namespace TopSecretPlans
         }
 
         List<int> evasionCheckList;
-        public void  EvasionCheck(int fuelRods, int fuelRodLevel, int controlRods, int controlRodLevel, int waterReactorLevel, int uraniumAmount, int boronAmount )
+         void  EvasionCheck(int fuelRods, int fuelRodLevel, int controlRods, int controlRodLevel, int waterReactorLevel, int uraniumAmount, int boronAmount )
         {
             if  (evasionCheckList != null)
             {
@@ -58,6 +58,16 @@ namespace TopSecretPlans
         public void HeatUp()
         {
             this.Temperature++;
+        }
+
+         void IChangeTemperature.CoolDown()
+        {
+            throw new NotImplementedException();
+        }
+
+         void IChangeTemperature.HeatUp()
+        {
+            throw new NotImplementedException();
         }
     }
 }

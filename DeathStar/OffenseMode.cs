@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TopSecretPlans
 {
-    class OffenseMode
+    public class OffenseMode
     {
         public void CheckMode()
         {
@@ -16,7 +16,7 @@ namespace TopSecretPlans
             Console.WriteLine("|-----------------------------|");
             Console.WriteLine("|------Offense Mode........OK-|");
             Console.WriteLine("|-----------------------------|");
-            Console.ReadLine();
+            
 
         }
         public void SystemOk()
@@ -26,7 +26,7 @@ namespace TopSecretPlans
             Console.WriteLine("|-----------------------------|");
             Console.WriteLine("|------All System........OK!|");
             Console.WriteLine("|-----------------------------|");
-            Console.ReadLine();
+           
 
         }
         public void LaserSound()

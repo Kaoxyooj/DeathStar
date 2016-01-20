@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace TopSecretPlans
 {
-    public class FuelCollector
+     public class FuelCollector
     {
-        public int tankSizeInGallons;
-        public bool isTankFull;
+         int tankSizeInGallons;
+         bool isTankFull;
 
-        public FuelCollector(int TankSizeInGallons)
+         FuelCollector(int TankSizeInGallons)
         {
             tankSizeInGallons = TankSizeInGallons;
         }
-        public void fuelTankStatus()
+         void fuelTankStatus()
         {
             Console.WriteLine("Fuel status");
         }

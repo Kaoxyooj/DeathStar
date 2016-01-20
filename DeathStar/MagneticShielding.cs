@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace TopSecretPlans
 {
-    class MagneticShielding
+    public class MagneticShielding
     {
-        public int energy = 100;
-        public int minMagShieldBuff = 1;
-        public int maxMagShieldBuff = 4;
-        public int enemyMinDMG = 30;
-        public int enemyMaxDMG = 60;
-        public int shieldGone = 0;
+         int energy = 100;
+         int minMagShieldBuff = 1;
+         int maxMagShieldBuff = 4;
+         int enemyMinDMG = 30;
+         int enemyMaxDMG = 60;
+         int shieldGone = 0;
 
 
         public int enemyDamage()
@@ -21,7 +21,7 @@ namespace TopSecretPlans
             Random incoming = new Random();
             int IncomingDMG = incoming.Next(enemyMinDMG, enemyMaxDMG);
             return IncomingDMG;
-        } 
+        }
 
 
 

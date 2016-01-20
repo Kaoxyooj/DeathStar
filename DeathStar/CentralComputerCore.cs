@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DeathStar;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,18 +7,31 @@ using System.Threading.Tasks;
 
 namespace TopSecretPlans
 {
-    public class CentralComputerCore
+    public class CentralComputerCore : IActivate
     {
         string command;
-        int computerPower;
+        int computerPower= 100;
         int coreHealth = 100;
         int shieldHealth = 100;
-        bool shieldStatus;
+        int rechargeShield = 100;
+        string shieldStatus;
+        string targetingSystem;
 
-        public CentralComputerCore(string Command, int ComputerPower)
+        public CentralComputerCore(string Command, int ComputerPower,string TargetingSystem)
         {
             command = Command;
             computerPower = ComputerPower;
+            targetingSystem = TargetingSystem;
+
+        }
+        public void Activate()
+        {
+            TurnShieldOnOrOff();            
+        }
+
+        public void Refresh()
+        {
+            ShieldRecharge(shieldHealth,100);
         }
 
         public string IssueCommands(string newCommand)
@@ -37,10 +51,22 @@ namespace TopSecretPlans
             shieldHealth--;
         }
 
-        public bool TurnShieldOnOrOff(bool shieldStatus)
+        public void TurnShieldOnOrOff()
         {
-            this.shieldStatus = shieldStatus;
-            return this.shieldStatus;
+            shieldHealth -= 100;   
+            Console.WriteLine("Core shield has been activated!");
+            Console.WriteLine("Shield health is at  " + shieldHealth);
+                      
+        }
+
+        public  int ShieldRecharge(int shieldHealth, int rechargeShield)
+        {
+            
+            Console.WriteLine("Shield is charging.");
+            shieldHealth += rechargeShield;
+            Console.WriteLine("Shield is now at full charge. " +shieldHealth);
+            return shieldHealth;
+
         }
 
         public void hasEmail()
@@ -62,7 +88,16 @@ namespace TopSecretPlans
                 Console.WriteLine("You have no mail.");
 
             }
-
         }
+
+            public void targetEnemy()
+        {
+            if (command == "target") {
+                Console.WriteLine("The Central Computer Core locks on the target coordinates.");
+            }
+        }
+
     }
-}
+    }
+
+

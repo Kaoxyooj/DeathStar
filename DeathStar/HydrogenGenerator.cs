@@ -9,7 +9,7 @@ namespace TopSecretPlans
     public class HydrogenGenerator : Reactor
     {
         public int HydrogenChargeRate = 6;
-        public HydrogenGenerator(int PowerRate) : base(PowerRate)
+         HydrogenGenerator(int PowerRate) : base(PowerRate)
         {
             
         }
